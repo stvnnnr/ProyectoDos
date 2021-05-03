@@ -5,7 +5,7 @@ function pulsar() {
     var password = document.getElementById('password').value
 
     if (usuario != "" && password != "") {
-        var url = 'http://localhost:5000/login';
+        var url = 'https://proyectodosipc1back.herokuapp.com/login';
         var data = { "user": usuario, "password": password };
 
         fetch(url, {
