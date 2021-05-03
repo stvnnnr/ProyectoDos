@@ -6,6 +6,8 @@ var selectEnfermera = 0;
 var enfermera = {};
 var selectMedicina = 0;
 var medicina = {};
+
+
 // función  que se ejecuta cuando inicar la pagina
 function mounted() {
   let user = JSON.parse(window.localStorage.getItem("user"));
