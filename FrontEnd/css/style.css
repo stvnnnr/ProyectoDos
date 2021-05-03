@@ -9,7 +9,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url(/FrontEnd/imagenes/medicina.jpg) no-repeat;
+  background: url(../imagenes/medicina.jpg) no-repeat;
   background-size: cover;
 }
 .login-box{

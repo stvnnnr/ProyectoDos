@@ -8,7 +8,7 @@ function mounted() {
 // función  borrar el usuario y manda a login
 function logout() {
   window.localStorage.removeItem("user");
-  window.location.href = "/FrontEnd/login.html";
+  window.location.href = "../login.html";
 }
 
 function crearCita() {
