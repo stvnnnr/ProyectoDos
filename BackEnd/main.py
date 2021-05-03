@@ -23,6 +23,11 @@ medicamentos = []
 users = []
 citas = []
 countCita = 0
+
+@app.route('/')
+def inicio():
+    return "steven"
+
 #Metodo web de el login
 @app.route('/login', methods=['POST'])
 def login():
