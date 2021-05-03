@@ -13,7 +13,7 @@ function logout() {
 }
 
 function getCitasPendientes() {
-  var url = `http://localhost:5000/enfermera-citas/Pendiente`;
+  var url = `https://proyectodosipc1back.herokuapp.com/enfermera-citas/Pendiente`;
 
   fetch(url, {
     method: "GET",
@@ -58,7 +58,7 @@ function getCitasPendientes() {
 }
 
 function getCitasAceptadas() {
-    var url = `http://localhost:5000/enfermera-citas/Aceptada`;
+    var url = `https://proyectodosipc1back.herokuapp.com/enfermera-citas/Aceptada`;
   
     fetch(url, {
       method: "GET",
@@ -99,7 +99,7 @@ function getCitasAceptadas() {
   
 
 function getDoctores() {
-    var url = `http://localhost:5000/doctores`;
+    var url = `https://proyectodosipc1back.herokuapp.com/doctores`;
   
     fetch(url, {
       method: "GET",
@@ -148,7 +148,7 @@ function changeStatusCita(idpaciente, iddoctor, status) {
     iddoctor: iddoctor,
     status: status,
   };
-  fetch("http://localhost:5000/status-cita", {
+  fetch("https://proyectodosipc1back.herokuapp.com/status-cita", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {

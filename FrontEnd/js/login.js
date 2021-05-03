@@ -23,13 +23,13 @@ function pulsar() {
                             window.location.href = "admin.html"
                             break;
                         case 'Doctor':
-                            window.location.href = "/FrontEnd/doctor/doctor.html"
+                            window.location.href = "./doctor/doctor.html"
                             break;
                         case 'Paciente':
-                            window.location.href = "/FrontEnd/paciente/paciente.html"
+                            window.location.href = "./paciente/paciente.html"
                             break;
                         case 'Enfermera':
-                            window.location.href = "/FrontEnd/enfermera/enfermera.html"
+                            window.location.href = "./enfermera/enfermera.html"
                             break;
                         default:
                             break;

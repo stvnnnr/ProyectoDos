@@ -88,7 +88,7 @@ function displayHTMLTableMedi(results) {
 
 //envia datos de forma masiva
 function sendMasiveCvsPaci() {
-  fetch("http://localhost:5000/carga-pacientes", {
+  fetch("https://proyectodosipc1back.herokuapp.com/carga-pacientes", {
     method: "POST",
     body: JSON.stringify(dataMasivePaci),
     headers: {
@@ -105,7 +105,7 @@ function sendMasiveCvsPaci() {
     });
 }
 function sendMasiveCvsDoc() {
-  fetch("http://localhost:5000/carga-doctores", {
+  fetch("https://proyectodosipc1back.herokuapp.com/carga-doctores", {
     method: "POST",
     body: JSON.stringify(dataMasiveDoc),
     headers: {
@@ -122,7 +122,7 @@ function sendMasiveCvsDoc() {
     });
 }
 function sendMasiveCvsEnfer() {
-  fetch("http://localhost:5000/carga-enfermeras", {
+  fetch("https://proyectodosipc1back.herokuapp.com/carga-enfermeras", {
     method: "POST",
     body: JSON.stringify(dataMasiveEnfer),
     headers: {
@@ -139,7 +139,7 @@ function sendMasiveCvsEnfer() {
     });
 }
 function sendMasiveCvsMedi() {
-  fetch("http://localhost:5000/carga-medicinas", {
+  fetch("https://proyectodosipc1back.herokuapp.com/carga-medicinas", {
     method: "POST",
     body: JSON.stringify(dataMasiveMedi),
     headers: {
@@ -158,7 +158,7 @@ function sendMasiveCvsMedi() {
 
 //obtener los arreglos
 function getPacientes() {
-  fetch("http://localhost:5000/pacientes", {
+  fetch("https://proyectodosipc1back.herokuapp.com/pacientes", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -206,7 +206,7 @@ function getPacientes() {
     });
 }
 function getDoctores() {
-  fetch("http://localhost:5000/doctores", {
+  fetch("https://proyectodosipc1back.herokuapp.com/doctores", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -255,7 +255,7 @@ function getDoctores() {
     });
 }
 function getEnfermeras() {
-  fetch("http://localhost:5000/enfermeras", {
+  fetch("https://proyectodosipc1back.herokuapp.com/enfermeras", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -303,7 +303,7 @@ function getEnfermeras() {
     });
 }
 function getMedicinas() {
-  fetch("http://localhost:5000/medicinas", {
+  fetch("https://proyectodosipc1back.herokuapp.com/medicinas", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -350,7 +350,7 @@ function getMedicinas() {
 
 //ver
 function verPaciente(index) {
-  fetch("http://localhost:5000/ver-paciente", {
+  fetch("https://proyectodosipc1back.herokuapp.com/ver-paciente", {
     method: "POST",
     body: JSON.stringify(index),
     headers: {
@@ -376,7 +376,7 @@ function verPaciente(index) {
     });
 }
 function verDoctor(index) {
-  fetch("http://localhost:5000/ver-doctor", {
+  fetch("https://proyectodosipc1back.herokuapp.com/ver-doctor", {
     method: "POST",
     body: JSON.stringify(index),
     headers: {
@@ -403,7 +403,7 @@ function verDoctor(index) {
     });
 }
 function verEnfermera(index) {
-  fetch("http://localhost:5000/ver-enfermera", {
+  fetch("https://proyectodosipc1back.herokuapp.com/ver-enfermera", {
     method: "POST",
     body: JSON.stringify(index),
     headers: {
@@ -429,7 +429,7 @@ function verEnfermera(index) {
     });
 }
 function verMedicina(index) {
-  fetch("http://localhost:5000/ver-medicina", {
+  fetch("https://proyectodosipc1back.herokuapp.com/ver-medicina", {
     method: "POST",
     body: JSON.stringify(index),
     headers: {
@@ -455,7 +455,7 @@ function verMedicina(index) {
 //ver pa editar
 function verPacienteEdit(index) {
   selectPaciente = index;
-  fetch("http://localhost:5000/ver-paciente", {
+  fetch("https://proyectodosipc1back.herokuapp.com/ver-paciente", {
     method: "POST",
     body: JSON.stringify(index),
     headers: {
@@ -489,7 +489,7 @@ function verPacienteEdit(index) {
 }
 function verDoctorEdit(index) {
   selectDoctor = index;
-  fetch("http://localhost:5000/ver-doctor", {
+  fetch("https://proyectodosipc1back.herokuapp.com/ver-doctor", {
     method: "POST",
     body: JSON.stringify(index),
     headers: {
@@ -525,7 +525,7 @@ function verDoctorEdit(index) {
 }
 function verEnfermeraEdit(index) {
   selectEnfermera = index;
-  fetch("http://localhost:5000/ver-enfermera", {
+  fetch("https://proyectodosipc1back.herokuapp.com/ver-enfermera", {
     method: "POST",
     body: JSON.stringify(index),
     headers: {
@@ -559,7 +559,7 @@ function verEnfermeraEdit(index) {
 }
 function verMedicinaEdit(index) {
   selectMedicina = index;
-  fetch("http://localhost:5000/ver-medicina", {
+  fetch("https://proyectodosipc1back.herokuapp.com/ver-medicina", {
     method: "POST",
     body: JSON.stringify(index),
     headers: {
@@ -588,7 +588,7 @@ function verMedicinaEdit(index) {
 
 //eliminar objeto
 function deletePaciente() {
-  fetch("http://localhost:5000/delete-paciente", {
+  fetch("https://proyectodosipc1back.herokuapp.com/delete-paciente", {
     method: "POST",
     body: JSON.stringify(selectPaciente),
     headers: {
@@ -605,7 +605,7 @@ function deletePaciente() {
     });
 }
 function deleteDoctor() {
-  fetch("http://localhost:5000/delete-doctor", {
+  fetch("https://proyectodosipc1back.herokuapp.com/delete-doctor", {
     method: "POST",
     body: JSON.stringify(selectDoctor),
     headers: {
@@ -622,7 +622,7 @@ function deleteDoctor() {
     });
 }
 function deleteEnfermera() {
-  fetch("http://localhost:5000/delete-enfermera", {
+  fetch("https://proyectodosipc1back.herokuapp.com/delete-enfermera", {
     method: "POST",
     body: JSON.stringify(selectEnfermera),
     headers: {
@@ -639,7 +639,7 @@ function deleteEnfermera() {
     });
 }
 function deleteMedicina() {
-  fetch("http://localhost:5000/delete-medicina", {
+  fetch("https://proyectodosipc1back.herokuapp.com/delete-medicina", {
     method: "POST",
     body: JSON.stringify(selectMedicina),
     headers: {
@@ -668,7 +668,7 @@ function updatePaciente() {
     password: document.getElementById("input-paciente-contrasena").value,
     telefono: document.getElementById("input-paciente-telefono").value,
   };
-  fetch("http://localhost:5000/edit-paciente", {
+  fetch("https://proyectodosipc1back.herokuapp.com/edit-paciente", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
@@ -696,7 +696,7 @@ function updateDoctor() {
     speciality: document.getElementById("input-doctor-especialidad").value,
     telefono: document.getElementById("input-doctor-telefono").value,
   };
-  fetch("http://localhost:5000/edit-doctores", {
+  fetch("https://proyectodosipc1back.herokuapp.com/edit-doctores", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
@@ -723,7 +723,7 @@ function updateEnfermera() {
     password: document.getElementById("input-enfermera-contrasena").value,
     telefono: document.getElementById("input-enfermera-telefono").value,
   };
-  fetch("http://localhost:5000/edit-enfermera", {
+  fetch("https://proyectodosipc1back.herokuapp.com/edit-enfermera", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
@@ -747,7 +747,7 @@ function updateMedicina() {
     descripcion: document.getElementById("input-medicina-descripcion").value,
     cantidad: document.getElementById("input-medicina-cantidad").value,
   };
-  fetch("http://localhost:5000/edit-medicina", {
+  fetch("https://proyectodosipc1back.herokuapp.com/edit-medicina", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {

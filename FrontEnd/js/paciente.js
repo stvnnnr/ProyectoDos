@@ -19,7 +19,7 @@ function crearCita() {
     motivo: document.getElementById("motivo").value,
   };
 
-  var url = `http://localhost:5000/store-cita`;
+  var url = `https://proyectodosipc1back.herokuapp.com/store-cita`;
 
   fetch(url, {
     method: "POST",
@@ -48,7 +48,7 @@ function crearCita() {
 
 function getCitas() {
   let user = JSON.parse(window.localStorage.getItem("user"));
-  var url = `http://localhost:5000/paciente-citas/${user.usuario_name}`;
+  var url = `https://proyectodosipc1back.herokuapp.com/paciente-citas/${user.usuario_name}`;
 
   fetch(url, {
     method: "GET",
