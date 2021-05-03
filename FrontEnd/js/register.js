@@ -10,7 +10,7 @@ function pulsar() {
     var telefono = document.getElementById('telefono').value
 
     if (nombre != null && apellido != null && birthday != "" && sexo != "" && user_name != "" && password != "") {
-        var url = 'http://localhost:5000/register';
+        var url = 'https://proyectodosipc1back.herokuapp.com/register';
         var data = { "nombre": nombre, "apellido": apellido, "birthday": birthday, "sexo": sexo, "user_name": user_name, "password": password, "telefono": telefono };
 
 
