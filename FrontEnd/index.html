@@ -1,15 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Index</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
+
 <body>
-    <h1>Pagina inicio</h1>
-    <input id="movlogin_button" type="button" class="btn" value="¿Ya tienes una cuenta? Inicia Sesión">
-    
-    <script src="js/movlogin.js"></script>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img src="./imagenes/logo.ico" alt="Logotipo" width="75" height="75">
+            <a class="navbar-brand" href="Index.html">UHOSPITAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <form class="d-flex">
+                        <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#developerCovi">Medidas de prevención del COVID</button>
+                    </form>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="register.html">¿No tienes cuenta?,
+                            Registrate</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#developerData">Datos del desarrollador</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="card-group">
+        <div class="card">
+            <img src="./imagenes/mision.png" class="card-img-top" alt="Ima" width="25" height="300">
+            <div class="card-body">
+                <h5 class="card-title">Misión</h5>
+                <p class="card-text">Colaborar para mejorar la salud y la calidad de vida de los ciudadanos, ofertando
+                    servicios
+                    sanitarios excelentes, con el paciente como centro de nuestra atención, y profesionales altamente
+                    cualificados, en un hospital privado con vocación docente e investigadora.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./imagenes/vision.png" class="card-img-top" alt="Ima" width="25" height="300">
+            <div class="card-body">
+                <h5 class="card-title">Visión</h5>
+                <p class="card-text">Liderar la Transformación del Sistema Sanitario actual para asegurar su
+                    sostenibilidad,
+                    promoviendo la innovación e incorporando las nuevas tecnologías disponibles también ser reconocidos
+                    como
+                    referentes a nivel nacional e internacional, desde la perspectiva asistencial, docente e
+                    investigadora.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./imagenes/acerca.png" class="card-img-top" alt="Ima" width="100" height="300">
+            <div class="card-body">
+                <h5 class="card-title">A cerca de</h5>
+                <p class="card-text">Este hospitales ageno al gobierno, trabaja por cuenta propia y tiene un gran
+                    programador con ganas de ganar ipc 1</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
+
+<div class="modal fade" id="developerData" tabindex="-1" aria-labelledby="developerDataLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="developerDataLabel">Datos del desarrollador.</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card" style="width: 18rem;" id="dataCard">
+                    <img src="./imagenes/desarrollador.jpg" class="card-img-top" alt="Desarrollador">
+                    <div class="card-body">
+                        <h5 class="card-title">Estudiante</h5>
+                        <p class="card-text">Wilber Steven Zúñiga Ruano
+                            <br>
+                            carnet: 202006629
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="developerCovi" tabindex="-1" aria-labelledby="developerDataLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="developerDataLabel">Medidas ante el COVID.</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card" style="width: 30rem;" id="dataCard">
+                    <p>Toma las precauciones adecuadas e infórmate bien para protegerte y cuidar de quienes te rodean.
+                        Sigue las recomendaciones de los organismos de salud pública de tu zona.
+                    </p>
+                    <br>
+                    <p>Para evitar la propagación de la COVID-19:
+                    </p>
+                    <br>
+                    <p>♦Lávate las manos con frecuencia. Usa agua y jabón o un desinfectante de manos a base de alcohol.
+                    </p>
+                    <br>
+                    <p>♦Mantén una distancia de seguridad con personas que tosan o estornuden.</p>
+                    <br>
+                    <p>♦Utiliza mascarilla cuando no sea posible mantener el distanciamiento físico.</p>
+                    <br>
+                    <p>♦No te toques los ojos, la nariz ni la boca.</p>
+                    <br>
+                    <p>♦Cuando tosas o estornudes, cúbrete la nariz y la boca con el codo flexionado o con un pañuelo.
+                    </p>
+                    <br>
+                    <p>♦Si no te encuentras bien, quédate en casa.</p>
+                    <br>
+                    <p>♦En caso de que tengas fiebre, tos o dificultad para respirar, busca atención médica.</p>
+                    <br>
+                    <div class="card-body">
+                        <h5 class="card-title">Nos tomamos enserio tu salud</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </html>

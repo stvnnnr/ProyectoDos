@@ -294,7 +294,7 @@ def statusCita():
         return jsonify({"status": 200})
 
 ###############################################################################################################3
-#Metodo registrar nuevo usuario, solamente paciente
+#Metodo para aceptar citas, etc
 @app.route('/store-cita', methods=['POST'])
 def StoreCita():
     if request.method == 'POST':
