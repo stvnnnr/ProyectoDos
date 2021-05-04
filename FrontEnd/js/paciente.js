@@ -71,7 +71,7 @@ function getCitas() {
         var row = data[i];
         var cells = row;
         for (const prop in cells) {
-          if (prop != "idpaciente" && prop != "iddoctor") {
+          if (prop != "idpaciente" && prop != "iddoctor" && prop != "statusdoctor") {
             table += "<td>";
             table += cells[prop];
             table += "</td>";

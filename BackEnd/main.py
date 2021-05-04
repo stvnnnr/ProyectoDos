@@ -164,6 +164,20 @@ def getEnfermeraCitas(status):
                 mecitas.append(cita)
 
         return json.dumps([ob.__dict__ for ob in mecitas])
+
+
+
+#para hacer obtener el doctor a utilizar a aceptar cita
+@app.route('/doctor-citas/<iddoctor>/<statusdoctor>', methods=['GET'])
+def getDoctorCitas(iddoctor, statusdoctor):
+    if request.method == 'GET':
+        mecitas = []
+        for cita in citas:
+            if cita.iddoctor == iddoctor:
+                if cita.statusdoctor == statusdoctor:
+                    mecitas.append(cita)
+
+        return json.dumps([ob.__dict__ for ob in mecitas])
 #############################################################################################################
 
 
@@ -275,8 +289,41 @@ def deleteMedicina():
         medicamentos.pop(params)
         return jsonify({"status": 200})
 
+#citas para doctor cita
+@app.route('/status-cita-doctor', methods=['POST'])
+def statusCitaDoctor():
+    if request.method == 'POST':
+        params = json.loads(request.data)
+        x = 0
+        for cita in citas:
+            if cita.idpaciente == params["idpaciente"]:
+                if cita.status == "Pendiente" or cita.status == "Aceptada" :
+                    setattr(cita, "status", params['status'])
+                    if params['status'] == 'Aceptada':
+                        setattr(cita, "iddoctor", params['iddoctor'])
+                        setattr(cita, "statusdoctor", "true")
+                    citas[x] =  cita
+            x = x + 1
 
-#eliminar cita
+        return jsonify({"status": 200})
+
+#citas de doctor
+@app.route('/statusdoctor-cita', methods=['POST'])
+def statusDoctorCita():
+    if request.method == 'POST':
+        params = json.loads(request.data)
+        x = 0
+        for cita in citas:
+            if cita.idpaciente == params["idpaciente"]:
+                if cita.status == "Aceptada" :
+                    setattr(cita, "status", "Completada")
+                    citas[x] =  cita
+            x = x + 1
+
+        return jsonify({"status": 200})
+
+
+#para las citas cita
 @app.route('/status-cita', methods=['POST'])
 def statusCita():
     if request.method == 'POST':
@@ -305,7 +352,7 @@ def StoreCita():
                 if cita.status == "Pendiente" or cita.status == "Aceptada":
                     count = count + 1
         if count == 0:
-            nueva_cita = Cita(params['idpaciente'],params['fecha'],params['motivo'], "Pendiente", "0")
+            nueva_cita = Cita(params['idpaciente'],params['fecha'],params['motivo'], "Pendiente", "0", "false")
             citas.append(nueva_cita)
             return jsonify({"status": 200, "mensaje": "Cita creada"})
         else:
