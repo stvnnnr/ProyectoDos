@@ -48,7 +48,40 @@
             </div>
         </div>
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-
+            <div class="col-auto bg-danger p-5 text-center">
+                <div class="col-auto bg-light p-5 text-center">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <!-- Modal -->
+                        <div class="form-group row">
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping">Hora y Fecha</span>
+                                <input class="form-control" type="datetime-local" value="2021-05-03T13:45:00"
+                                    id="datetime">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">Nombre del paciente</span>
+                            <input type="text" class="form-control" placeholder="Nombre completo" aria-label="Username"
+                                aria-describedby="addon-wrapping">
+                        </div>
+                        <br>
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">Padecimiento</span>
+                            <input type="text" class="form-control" placeholder="Problema" aria-label="Username"
+                                aria-describedby="addon-wrapping">
+                        </div>
+                        <br>
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text" id="addon-wrapping">Descripción</span>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-success" onclick="geneFactura()">Generar Receta</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

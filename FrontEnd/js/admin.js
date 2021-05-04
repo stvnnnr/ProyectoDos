@@ -349,7 +349,50 @@ function getMedicinas() {
       console.log(error);
     });
 }
+var username
+function verUser() {
+  username = user.usuario_name
+  let data = `                                    
+  <label class="text-muted mb-2">Nombre: </label><br>
+  <input id="input-edit-nombre" type="text" class="form-control" value="${user.nombre}">
+  <label class="text-muted mb-2">Apellido: </label><br>
+  <input id="input-edit-apellido" type="text" class="form-control" value="${user.apellido}">
+  <label class="text-muted mb-2">Usuario: </label><br>
+  <input id="input-edit-usuario_name" type="text" class="form-control" value="${user.usuario_name}">
+  <label class="text-muted mb-2">Contraseña: </label><br>
+  <input id="input-edit-contrasena" type="text" class="form-control" value="${user.contrasena}">
 
+  `;
+  $("#user-data-edit").html(data);
+}
+function updateDataUser() {
+  data = {
+    index: username,
+    nombre: document.getElementById("input-edit-nombre").value,
+    apellido: document.getElementById("input-edit-apellido").value,
+    usuario_name: document.getElementById("input-edit-usuario_name").value,
+    contrasena: document.getElementById("input-edit-contrasena").value,
+  };
+  fetch("https://proyectodosipc1back.herokuapp.com/user-admin-edit", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then(function (response) {
+      console.log(response.user);
+      window.localStorage.setItem('user', JSON.stringify(response.user));
+      user = JSON.parse(window.localStorage.getItem("user"));
+      $("#name-user-login").html(`${user.nombre} ${user.apellido}`);
+      $("#type-user-login").html(`${user.usuario_name}`);
+      $("#edit-user").modal("hide");
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
 //ver
 function verPaciente(index) {
   fetch("https://proyectodosipc1back.herokuapp.com/ver-paciente", {

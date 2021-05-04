@@ -118,6 +118,18 @@ function getCitasAsignadas() {
     });
 }
 
+function geneFactura() {
+  var element = document.getElementById('pills-profile');
+  var opt = {
+    margin: 0.7,
+    filename: 'receta.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+  html2pdf().set(opt).from(element).save();
+}
+
 function getCitasAceptadas() {
   var url = `https://proyectodosipc1back.herokuapp.com/doctor-citas/${user.usuario_name}/${true}`;
 
@@ -153,13 +165,10 @@ function getCitasAceptadas() {
             table += "</td>";
           }
         }
-        table += `<td><input class="form-check-input" type="checkbox" ${
-          row["status"] == "Completada" ? "checked" : ""
-        } ${
-          row["status"] == "Completada" ? "disabled" : ""
-        } value="${status}" id="${row["idpaciente"]}${i}" oninput="changeStatusCitaDoctor('${
-          row["idpaciente"]
-        }', '${row["idpaciente"]}${i}')"></td>`;
+        table += `<td><input class="form-check-input" type="checkbox" ${row["status"] == "Completada" ? "checked" : ""
+          } ${row["status"] == "Completada" ? "disabled" : ""
+          } value="${status}" id="${row["idpaciente"]}${i}" oninput="changeStatusCitaDoctor('${row["idpaciente"]
+          }', '${row["idpaciente"]}${i}')"></td>`;
 
         table += "</tr>";
       }

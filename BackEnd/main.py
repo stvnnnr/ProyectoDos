@@ -142,7 +142,7 @@ def getMedicinas():
     if request.method == 'GET':
         return json.dumps([ob.__dict__ for ob in medicamentos])
 
-#para hacer obtener el paciente para la cita a utilizar
+#para hacer obtener el paciente para la cita a usar
 @app.route('/paciente-citas/<usuario>', methods=['GET'])
 def getPacienteCitas(usuario):
     if request.method == 'GET':
@@ -337,7 +337,7 @@ def statusCita():
                         setattr(cita, "iddoctor", params['iddoctor'])
                     citas[x] =  cita
             x = x + 1
-            
+
         return jsonify({"status": 200})
 
 ###############################################################################################################3
@@ -357,6 +357,7 @@ def StoreCita():
             return jsonify({"status": 200, "mensaje": "Cita creada"})
         else:
             return jsonify({"status": 201, "mensaje": "Tienes una cita pendiente o aceptada"})
+
 
 #correr app
 if __name__ == '__main__':
